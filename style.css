@@ -1,0 +1,272 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-primary:#1A2238;
+    --color-secondary:#9daaf2;
+    --color-third:#ff6a3d;
+    --color-fourth:#f4db7d;
+    --txt-primary:#eaeaea;
+    --txt-secondary:#000000;
+}
+
+.header{
+    width: 100%;
+    background-color:var(--color-primary) ;
+    color: var(--txt-primary);
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center ;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.all-logo{
+    margin-right: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo-img{
+    width:75px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+
+.logo-img:hover{
+    color: var(--color-third);
+    transform: rotate(720deg);
+}
+
+.logo-title{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.logo-title:hover{
+    color: var(--color-third);
+
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+}
+
+nav, ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding: 16px;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover{
+    transform: rotate(5deg);
+}
+
+a{
+    color: var(--txt-primary);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--color-third);
+}
+
+.btn{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 20px;
+    padding: 8px 16px;
+    background-color: var(--color-third);
+    color: var(--txt-primary);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--color-fourth);
+    color: var(--txt-secondary);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.saya{
+    height: auto;
+    max-width: 1000px;
+    width: 40%;
+}
+
+.description{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.parallax {
+    position: relative;
+    height: 150vh;
+    overflow: hidden;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("assets/foto/saya4.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur();
+    z-index: -1; /* Agar elemen lain tetap di atas background */
+}
+
+
+.tentang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    color: var(--txt-primary);
+    padding: 40px;
+}
+
+.mt-10{
+    margin-top: 20px;
+}
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    min-height: 200px;
+    max-height: 350px;
+    background-color: aquamarine;
+    color:var(--txt-secondary) ;
+    padding:24px;
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0,0.5);
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin: px 0px;
+}
+
+.card-title{
+    font-size:18px;
+    font-weight: bolder;
+}
+
+.card-description{
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--txt-primary);
+}
+
+@media screen and (max-width: 550px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-item{
+        width:100%;
+        opacity: 85%;
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .saya{
+        width: 100%;
+    }
+
+    .intro{
+        margin-top: 30px;
+    }
+
+    .logo{
+        width: 30%;
+    }
+
+    nav{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-color: var(--color-primary);
+        padding: 0;
+        z-index:10;
+    }
+
+    footer{
+        margin-bottom: 60px;
+    }
+}

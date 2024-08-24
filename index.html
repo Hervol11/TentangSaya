@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Silkscreen:wght@400;700&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-	<title>Tentang Saya</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	<title>Document</title>
 </head>
-
 <body>
 	<header class="header">
-		<div class="all-logo" id="logo">
-			<img src="assets/icons/hervol11.png" alt="logo" class="logo-img" href="#">
-			<h1 class="logo-title" onclick="logo()">HERVOL</h1>
-		</div>
-		<nav class="nav">
+			<div class="all-logo" id="logo">
+				<img src="assets/icons/hervol11.png" alt="logo" class="logo-img" href="#">
+				<h1 class="logo-title" onclick="logo()">HERVOL</h1>
+			</div>
+		<nav>
 			<ul>
+				<li><a href="#karya">KARYA</a></li>
 				<li><a href="#about">ABOUT</a></li>
 				<li><a href="mailto:kevinparaskevi4@gmail.com">KONTAK</a></li>
 			</ul>
@@ -31,13 +28,14 @@
 	</header>
 	<div class="container">
 		<div class="intro">
-			<p class="title animate__animated animate__pulse animate__infinite">Hello, Kevin here!</p>
-			<p class="description animate__animated animate__pulse animate__infinite">a student who likes coding</p>
-			<img src="assets/foto/saya3.jpg" alt="" class="saya animate__animated animate__tada">
+			<p class="title">Hello, Kevin here!</p>
+			<p class="description">a student who likes coding</p>
+			<img src="assets/foto/saya5.jpg" alt="" class="saya">
+
 		</div>
 	</div>
 	<div class="parallax" id="about">
-		<div class="tentang animate__animated animate__zoomIn">
+		<div class="tentang">
 			<p class="title">saya adalah pelajar</p>
 			<p class="description">kehidupan adalah sebuah game</p>
 			<div class="mt-10">
@@ -46,39 +44,57 @@
 				</a>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container" >
 			<div class="cards">
-				<div class="card-item  animate__animated animate__slideInLeft animate__delay-3s" id="card1">
+				<div class="card-item">
 					<p class="card-title">Hobby saya ngoding dan main game</p>
 					<img src="assets/icons/game-console.png" alt="icon-1" class="icon">
 					<p class="card-description">Jalani hidup dengan tujuan tetapi tetap butuh hiburan</p>
 				</div>
-				<div class="card-item animate__animated animate__slideInUp animate__delay-4s" id="card2">
+				<div class="card-item">
 					<p class="card-title">Saya bercita cita menjadi proggrammer</p>
 					<img src="assets/icons/web-development.png" alt="icon-2" class="icon">
 					<p class="card-description">Cita cita tanpa usaha hanyalah sebuah angan angan belaka</p>
 				</div>
-				<div class="card-item animate__animated animate__slideInRight animate__delay-5s" id="card3">
+				<div class="card-item">
 					<p class="card-title">Konsisten adalah Koenci</p>
 					<img src="assets/icons/24-hours.png" alt="icon-3" class="icon">
 					<p class="card-description">Apapun yang ingin kamu lakukukan maka kerjakan lah dengan konsisten</p>
 				</div>
+				</div>
+			</div> 
+			<div class="container" id="karya">
+				<h2 class="intro title tentang">Karya Saya</h2>
+				<div class="cards mt-10">
+					<div class="card-item">
+						<p class="card-title">Website Putar Lagu</p>
+						<img src="assets/icons/karya1.jpg" alt="icon-1" class="icon">
+						<p class="card-description">website yang bisa memutar lagu sesuai yang ada di list (gabut doang)</p>
+						<a href="https://hervol11.github.io/lagu/"><button class="btn">Kunjungi</button></a>
+					</div>
+					<div class="card-item">
+						<p class="card-title">Website Tebak Khodam</p>
+						<img src="assets/icons/karya2.jpg" alt="icon-1" class="icon">
+						<p class="card-description">website yang bisa menggenerated khodam random(lumayan lah)</p>
+						<a href="https://hervol11.github.io/Khodam-saya/"><button class="btn">Kunjungi</button></a>
+					</div>
+					<div class="card-item">
+						<p class="card-title">Gambar Anime</p>
+						<img src="assets/icons/gambar1.jpg" alt="icon-1" class="perbesarIcon">
+						<p class="card-description">Hasil percobaan pertama kali belajar gambar selama 7 hari</p>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	
 	<footer>
 		<p class="title">&copy;Hervol</p>
 	</footer>
 
 	<script>
-		let card1 = document.getElementById("card1")
-		let card2 = document.getElementById("card2")
-		let card3 = document.getElementById("card3")
-
-		function logo() {
+		function logo(){
 			location.reload()
 		}
 	</script>
 </body>
-
 </html>

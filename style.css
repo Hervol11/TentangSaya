@@ -39,6 +39,7 @@
 
 .logo-img{
     width:75px;
+    cursor: pointer;
     transition: 0.5s all ease-in-out;
 }
 
@@ -50,12 +51,11 @@
 .logo-title{
     margin-left: 10px;
     cursor: pointer;
-    transition: 0.3s all ease-in-out;
 }
 
 .logo-title:hover{
     color: var(--color-third);
-    transform: rotate(5deg);
+
 }
 
 nav{
@@ -76,7 +76,6 @@ nav, ul{
 
 li{
     list-style-type: none;
-    text-decoration: none;
     padding: 10px;
     transition: all 0.3s ease-in-out;
 }
@@ -113,13 +112,9 @@ a:hover{
 }
 
 .container{
-    width: 100%;
-    margin: 0px 0px;
-    padding: 0px 0px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .intro{
@@ -138,7 +133,6 @@ a:hover{
 
 .saya{
     height: auto;
-    border: 5px solid var(--color-third);
     max-width: 1000px;
     width: 40%;
 }
@@ -150,7 +144,7 @@ a:hover{
 
 .parallax {
     position: relative;
-    height: 150vh;
+    height: 300vh;
     overflow: hidden;
 }
 
@@ -202,8 +196,8 @@ a:hover{
     align-items: center;
     text-align: center;
     width: 30%;
-    min-height: 200px;
-    max-height: 350px;
+    /* min-height: 200px; */
+    height: 380px;
     background-color: aquamarine;
     color:var(--txt-secondary) ;
     padding:24px;
@@ -215,7 +209,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     width: 100px;
-    margin: 0px 10px;
+    margin: px 0px;
 }
 
 .card-title{
@@ -235,6 +229,10 @@ footer{
     color: var(--txt-primary);
 }
 
+.perbesarIcon{
+    width: 200px;
+}
+
 @media screen and (max-width: 550px) {
     .cards{
         display: flex;
@@ -251,14 +249,8 @@ footer{
         padding: 0;
     }
 
-    .intro{
-        margin-top:0;
-        padding:0;
-    }
-
     .saya{
         width: 100%;
-        border: none;
     }
 
     .intro{
@@ -271,12 +263,11 @@ footer{
 
     nav{
         position: fixed;
+        width: 100%;
         bottom: 0;
         background-color: var(--color-primary);
-        width: 100%;
-        z-index: 9;
         padding: 0;
-        font-size: 22px;
+        z-index:10;
     }
 
     footer{
